@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="250"
+        x:Class="MyApp.MainWindow"
+        Title="MyApp"
+        Background="Aqua">
+    <Grid RowDefinitions="Auto,*" Margin="20">
+        <!-- Display -->
+        <TextBox x:Name="Display" Grid.Row="0" FontSize="24" IsReadOnly="True" HorizontalAlignment="Stretch" Margin="0,0,0,10" Background="BlanchedAlmond"/>
+        <!-- Buttons -->
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*,*" >
+            <!-- Row 0: Clear, Delete, Divide, Multiply -->
+            <Button Content="⌫" Grid.Row="0" Grid.Column="0" Click="Delete_Click" Width="35" Height="30" Background="Beige" BorderThickness="1" BorderBrush="Red"/>
+            <Button Content="C" Grid.Row="0" Grid.Column="1" Click="ClearAll_Click" Width="35" Height="30"/>
+            <Button Content="/" Grid.Row="0" Grid.Column="2" Click="Operator_Click" Width="35" Height="30"/>
+            <Button Content="*" Grid.Row="0" Grid.Column="3" Click="Operator_Click" Width="35" Height="30"/>
+            <!-- Row 1: 7, 8, 9, - -->
+            <Button Content="7" Grid.Row="1" Grid.Column="0" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="8" Grid.Row="1" Grid.Column="1" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="9" Grid.Row="1" Grid.Column="2" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="-" Grid.Row="1" Grid.Column="3" Click="Operator_Click" Width="35" Height="30"/>
+            <!-- Row 2: 4, 5, 6, + -->
+            <Button Content="4" Grid.Row="2" Grid.Column="0" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="5" Grid.Row="2" Grid.Column="1" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="6" Grid.Row="2" Grid.Column="2" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="+" Grid.Row="2" Grid.Column="3" Click="Operator_Click" Width="35" Height="30"/>
+            <!-- Row 3: 1, 2, 3, = -->
+            <Button Content="1" Grid.Row="3" Grid.Column="0" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="2" Grid.Row="3" Grid.Column="1" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="3" Grid.Row="3" Grid.Column="2" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="=" Grid.Row="3" Grid.Column="3" Click="Equals_Click" Width="35" Height="30"/>
+            <!-- Row 4: 0, . (decimal) -->
+            <Button Content="0" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Click="Digit_Click" Width="35" Height="30"/>
+            <Button Content="." Grid.Row="4" Grid.Column="2" Click="Digit_Click" Width="35" Height="30"/>
+        </Grid>
+    </Grid>
+</Window>
